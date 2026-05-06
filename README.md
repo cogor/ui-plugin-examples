@@ -34,7 +34,7 @@ The extensions should then appear on the 'Extensions' page in Rancher Manager.
 
 You can build and run the extensions locally, to do so:
 
-- Run `yarn install`
+- Run `yarn install --frozen-lockfile`
 - Set the API environment variable to point to a Rancher backend
 - Run Rancher in development mode with `yarn dev`
 - Open a web browser to `https://127.0.0.1:8005`
