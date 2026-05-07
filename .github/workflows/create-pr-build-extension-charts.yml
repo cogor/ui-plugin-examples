@@ -16,8 +16,6 @@ jobs:
     permissions:
       actions: write
       contents: write
-      deployments: write
-      pages: write
       pull-requests: write
     with:
       target_branch: main
