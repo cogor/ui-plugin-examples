@@ -2,18 +2,33 @@
   "name": "ui-plugin-examples",
   "version": "0.2.0",
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
   "dependencies": {
-    "@rancher/shell": "3.0.8",
+    "@rancher/shell": "3.0.12-rc.7",
     "cache-loader": "4.1.0",
     "color": "4.2.3",
     "ip": "2.0.1",
     "node-polyfill-webpack-plugin": "3.0.0"
   },
+  "devDependencies": {
+    "@babel/core": "7.26.0",
+    "@babel/preset-env": "7.26.0",
+    "@types/jest": "^29",
+    "@vue/test-utils": "^2",
+    "@vue/vue3-jest": "^29",
+    "babel-jest": "^29",
+    "babel-plugin-module-resolver": "*",
+    "babel-plugin-transform-require-context": "*",
+    "jest": "^29",
+    "jest-environment-jsdom": "^29",
+    "ts-jest": "^29"
+  },
   "resolutions": {
     "@types/node": "20.10.8",
-    "@types/lodash": "4.17.5"
+    "@types/lodash": "4.17.5",
+    "@babel/core": "7.26.0",
+    "@babel/preset-env": "7.26.0"
   },
   "scripts": {
     "dev": "NODE_ENV=dev ./node_modules/.bin/vue-cli-service serve",
@@ -22,6 +37,8 @@
     "build-pkg": "./node_modules/@rancher/shell/scripts/build-pkg.sh",
     "serve-pkgs": "./node_modules/@rancher/shell/scripts/serve-pkgs",
     "publish-pkgs": "./node_modules/@rancher/shell/scripts/extension/publish",
-    "parse-tag-name": "./node_modules/@rancher/shell/scripts/extension/parse-tag-name"
+    "parse-tag-name": "./node_modules/@rancher/shell/scripts/extension/parse-tag-name",
+    "test": "jest",
+    "test:ci": "NODE_OPTIONS=--max_old_space_size=8192 jest --silent"
   }
 }

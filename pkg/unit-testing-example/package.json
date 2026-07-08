@@ -1,7 +1,7 @@
 {
-  "name": "extensions-api-demo",
-  "description": "Extensions Api demo extension",
-  "version": "0.2.8",
+  "name": "unit-testing-example",
+  "description": "Extension showcasing the unit testing setup for Rancher UI extensions",
+  "version": "0.1.0",
   "private": false,
   "rancher": {
     "annotations": {
