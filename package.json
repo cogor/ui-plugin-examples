@@ -28,7 +28,8 @@
     "@types/node": "20.10.8",
     "@types/lodash": "4.17.5",
     "@babel/core": "7.26.0",
-    "@babel/preset-env": "7.26.0"
+    "@babel/preset-env": "7.26.0",
+    "@achrinza/node-ipc": "9.2.10"
   },
   "scripts": {
     "dev": "NODE_ENV=dev ./node_modules/.bin/vue-cli-service serve",
