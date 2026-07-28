@@ -1,40 +1,21 @@
-<script lang="ts">
-import { defineComponent, PropType } from 'vue';
-
+<script setup lang="ts">
 import { useCounter } from '../composables/useCounter';
 
-export default defineComponent({
-  name: 'CounterDisplay',
-
-  props: {
-    title: {
-      type:    String as PropType<string>,
-      default: 'Counter',
-    },
-    initial: {
-      type:    Number as PropType<number>,
-      default: 0,
-    },
-  },
-
-  setup(props) {
-    const {
-      count,
-      doubled,
-      decrement,
-      increment,
-      reset,
-    } = useCounter(props.initial);
-
-    return {
-      count,
-      doubled,
-      decrement,
-      increment,
-      reset,
-    };
-  },
+const props = withDefaults(defineProps<{
+  title?: string;
+  initial?: number;
+}>(), {
+  title:   'Counter',
+  initial: 0,
 });
+
+const {
+  count,
+  doubled,
+  decrement,
+  increment,
+  reset,
+} = useCounter(props.initial);
 </script>
 
 <template>
