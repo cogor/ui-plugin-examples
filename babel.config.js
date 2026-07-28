@@ -12,6 +12,7 @@ module.exports = {
             },
           },
         ],
+        'babel-plugin-transform-require-context',
       ],
     },
   },

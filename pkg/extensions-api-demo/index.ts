@@ -142,7 +142,7 @@ export default function (plugin: IPlugin) {
   // NEW TabLocation - introduced in Rancher 2.14+
   // https://extensions.rancher.io/extensions/next/api/tabs
   plugin.addTab(
-    TabLocation.ALL,
+    TabLocation.RESOURCE_DETAIL,
     { resource: ['pod', 'service'] },
     {
       name:       'some-name',
